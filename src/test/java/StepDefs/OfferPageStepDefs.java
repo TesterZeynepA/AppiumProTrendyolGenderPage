@@ -15,4 +15,28 @@ public class OfferPageStepDefs {
         op.checkOfferPage();
     }
 
+    @Given("user is on the Offer Page")
+    public void userIsOnTheOfferPage() {
+        op.checkOfferPage();
+    }
+
+    @Then("should see Image on Offer Page")
+    public void shouldSeeImageOnOfferPage() {
+        op.checkImage();
+    }
+
+    @Then("should see Close Button on Offer Page")
+    public void shouldSeeCloseButtonOnOfferPage() {
+        op.checkCloseButton();
+    }
+
+    @Then("should see Text: {string} on Offer Page")
+    public void shouldSeeTextOnOfferPage(String expectedText) {
+        op.checkText(expectedText);
+    }
+
+    @Then("should see Yes Button: {string} on Offer Page")
+    public void shouldSeeYesButtonOnOfferPage(String expectedText) {
+        op.checkYesButton(expectedText);
+    }
 }

@@ -7,17 +7,18 @@ import org.testng.Assert;
 
 public class GenderPage {
     AndroidDriver driver;
-    ReusableMethods methods = new ReusableMethods(driver);
+    ReusableMethods methods;
 
     public GenderPage(AndroidDriver androidDriver) {
         driver = androidDriver;
+        methods = new ReusableMethods(driver);
     }
 
     By erkekButton = By.id("trendyol.com:id/buttonSelectGenderMan");
     By kadinButton = By.id("trendyol.com:id/buttonSelectGenderWoman");
     By image = By.xpath("//android.widget.LinearLayout/android.widget.ImageView");
     By closeButton = By.id("trendyol.com:id/buttonDismiss");
-    By text = By.className("android.widget.TextView");
+    By text = By.xpath("//android.widget.TextView");
 
     public void checkGenderPage() {
         methods.checkElement(erkekButton);
